@@ -1,5 +1,5 @@
 <templateSet group="Flutter: BloC">
-  <template name="bloc" value="class $NAME$Bloc implements Bloc {&#10;  @override&#10;  void dispose() {&#10;    // TODO: implement dispose&#10;  }&#10;}" description="New BloC definition" toReformat="false" toShortenFQNames="true">
+  <template name="bloc" value="class $NAME$Bloc implements Bloc {&#10;  @override&#10;  void dispose() {&#10;    // TODO: implement dispose&#10;  }&#10;  &#10;  static $NAME$Bloc of(BuildContext context) =&gt; BlocProvider.of(context);&#10;}" description="New BloC definition" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART_TOPLEVEL" value="true" />
@@ -15,7 +15,7 @@
       <option name="DART_TOPLEVEL" value="false" />
     </context>
   </template>
-  <template name="bof" value="static $TYPE$ of(BuildContext context) =&gt; Bloc.of(context);" description="Bloc.of" toReformat="false" toShortenFQNames="true">
+  <template name="bof" value="static $TYPE$ of(BuildContext context) =&gt; BlocProvider.of(context);" description="Bloc.of" toReformat="false" toShortenFQNames="true">
     <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART" value="true" />
