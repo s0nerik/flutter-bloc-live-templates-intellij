@@ -1,0 +1,25 @@
+<templateSet group="Flutter: BloC">
+  <template name="bloc" value="class $NAME$Bloc implements Bloc {&#10;  @override&#10;  void dispose() {&#10;    // TODO: implement dispose&#10;  }&#10;}" description="New BloC definition" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="bval" value="final _$NAME$ = BehaviorSubject&lt;$TYPE$&gt;.seeded($VALUE$);&#10;ValueObservable&lt;$TYPE$&gt; get $NAME$ =&gt; _$NAME$.stream;&#10;set$NAME_CAMEL$($TYPE$ value) =&gt; _$NAME$.value = value;&#10;" description="BloC value" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME_CAMEL" expression="capitalize(NAME)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
+  <template name="bof" value="static $TYPE$ of(BuildContext context) =&gt; Bloc.of(context);" description="Bloc.of" toReformat="false" toShortenFQNames="true">
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
+</templateSet>
